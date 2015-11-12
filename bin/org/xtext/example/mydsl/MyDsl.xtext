@@ -1,0 +1,24 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Model:
+	greetings+=Greeting+;
+	
+Greeting:
+	'Question{'question=STRING '}'
+	reponses += Reponse+
+	;
+
+Reponse:
+	ReponseT |
+	ReponseF
+;
+
+ReponseT:
+	'ReponseTrue{'name = STRING'}'
+	;
+	
+ReponseF:
+	'ReponseFalse{'name=STRING'}'
+	;
