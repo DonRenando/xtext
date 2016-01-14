@@ -1,1 +1,1 @@
-# xtext
+# xtext : generateur de QCM
